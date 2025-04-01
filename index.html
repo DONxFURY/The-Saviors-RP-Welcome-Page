@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Saviors: RP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Parallax Effect */
+        .parallax {
+            background-image: url('https://i.imgur.com/0SUP1i6.png');
+            height: 100vh;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .header-overlay {
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .glow-text {
+            text-shadow: 0 0 15px rgb(214, 183, 8), 0 0 25px rgba(255, 215, 0, 1);
+        }
+
+        .btn-glow:hover {
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+            transform: scale(1.1);
+        }
+
+        .server-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .pulse-btn:hover {
+            animation: pulse 1.2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* iZurvive Map Embed Styling */
+        .iframe-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            margin-top: 30px;
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-900 sticky top-0 z-50 shadow-lg border-b border-yellow-500">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://i.imgur.com/0SUP1i6.png" alt="Logo" class="w-12 h-12 mr-3 rounded-full shadow-md">
+                <span class="text-2xl font-bold text-yellow-400 glow-text">The Saviors: RP</span>
+            </div>
+            <div class="space-x-6 text-lg">
+                <a href="#about" class="hover:text-yellow-400 transition">About</a>
+                <a href="#features" class="hover:text-yellow-400 transition">Features</a>
+                <a href="https://imgur.com/a/haPbPHl" class="hover:text-yellow-400 transition">Gallery</a>
+                <a href="#testimonials" class="hover:text-yellow-400 transition">Reviews</a>
+                <a href="https://discord.gg/6ec6MjBMFb" class="hover:text-yellow-400 transition">Join Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Parallax -->
+    <header class="text-center py-24 relative overflow-hidden parallax">
+        <div class="header-overlay absolute inset-0 z-0"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 fade-in">
+            <h1 class="text-6xl font-bold text-yellow-400 mb-6 glow-text">Welcome to The Saviors: RP</h1>
+            <p class="text-2xl text-gray-300 mb-8">A thrilling roleplay experience where survival is key and the world is unforgiving.</p>
+            <a href="https://discord.gg/6ec6MjBMFb" class="inline-block bg-yellow-600 hover:bg-yellow-700 px-10 py-4 rounded-full text-xl font-semibold transition-all transform hover:scale-110 shadow-lg btn-glow pulse-btn">
+                Join Our Discord
+            </a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-6 container mx-auto text-center fade-in">
+        <h2 class="text-5xl text-yellow-400 font-bold mb-8">About The Saviors: RP</h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">The Saviors: RP is a dynamic DayZ server offering a challenging survival experience in a unique, immersive world. With realistic systems, community-driven events, and endless opportunities for roleplay, you’ll find yourself constantly engaged. Whether you’re surviving in the wild, leading a faction, or building your empire, there’s a role for everyone.</p>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 px-6 container mx-auto fade-in">
+        <h2 class="text-5xl text-center text-yellow-400 font-bold mb-12">Why Choose The Saviors: RP?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="server-card bg-gray-800 p-6 rounded-xl shadow-2xl border border-yellow-500 hover:shadow-yellow-500">
+                <h3 class="text-3xl font-bold text-yellow-400 mb-3">🔥 Realistic Survival</h3>
+                <p class="text-gray-300">Engage in realistic survival mechanics with hunger, thirst, and weather conditions.</p>
+            </div>
+            <div class="server-card bg-gray-800 p-6 rounded-xl shadow-2xl border border-yellow-500 hover:shadow-yellow-500">
+                <h3 class="text-3xl font-bold text-yellow-400 mb-3">💀 Pvp Events</h3>
+                <p class="text-gray-300">Face off in intense player-versus-player combat events.</p>
+            </div>
+            <div class="server-card bg-gray-800 p-6 rounded-xl shadow-2xl border border-yellow-500 hover:shadow-yellow-500">
+                <h3 class="text-3xl font-bold text-yellow-400 mb-3">💼 Faction & Economy</h3>
+                <p class="text-gray-300">Join a faction or build your own, trade, and fight for control of resources.</p>
+            </div>
+            <div class="server-card bg-gray-800 p-6 rounded-xl shadow-2xl border border-yellow-500 hover:shadow-yellow-500">
+                <h3 class="text-3xl font-bold text-yellow-400 mb-3">🔪 1.5x Boosted</h3>
+                <p class="text-gray-300">All weapons, tools and Food to survive the harsh environment.</p>
+            </div>
+            <div class="server-card bg-gray-800 p-6 rounded-xl shadow-2xl border border-yellow-500 hover:shadow-yellow-500">
+                <h3 class="text-3xl font-bold text-yellow-400 mb-3">⚔️ Custom Factions</h3>
+                <p class="text-gray-300">Create alliances or become enemies with unique factions and player groups.</p>
+            </div>
+            <div class="server-card bg-gray-800 p-6 rounded-xl shadow-2xl border border-yellow-500 hover:shadow-yellow-500">
+                <h3 class="text-3xl font-bold text-yellow-400 mb-3">📈 Real-time Stats</h3>
+                <p class="text-gray-300">Monitor the survival stats of the server, including player counts and active events.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- iZurvive Map Section -->
+    <section id="map" class="py-16 px-6 container mx-auto text-center">
+        <h2 class="text-5xl text-yellow-400 font-bold mb-8">Livonia Map</h2>
+        <div class="iframe-container">
+            <iframe src="https://www.izurvive.com/livonia/" width="100%" height="600" style="border: none;" title="iZurvive Livonia Map"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 mt-12 text-center text-gray-400">
+        <p class="text-lg">&copy; 2025 The Saviors: RP. Not affiliated with Bohemia Interactive.</p>
+    </footer>
+
+</body>
+</html>
